@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Must use dist from popper dist/umd folder if importing using script tags -->
+    <script defer src="popper.min.js"></script>
+    <script defer src="js/bootstrap.js"></script>
+    <!-- <script defer src="toast.js"></script> -->
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" width="70" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+      
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                    <svg class="bi bi-person-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                      </svg>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Projects</a></li>
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">
+                    <svg class="bi bi-power" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.578 4.437a5 5 0 1 0 4.922.044l.5-.866a6 6 0 1 1-5.908-.053l.486.875z"/>
+                        <path fill-rule="evenodd" d="M7.5 8V1h1v7h-1z"/>
+                      </svg>
+                      Log out</a></li>
+                </ul>
+              </li>
+
+
+            </ul>
+            <form class="d-flex">
+              <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success mx-3" type="submit">Search</button>
+            </form>
+
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <ul class="nav">
+            <li class="nav-item active"><a href="#" class="nav-link">Link 1</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Link 1</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Link 1</a></li>
+        </ul>
+
+
+        <ul class="nav nav-tabs my-5" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Home</div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Profile</div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Contact</div>
+          </div>
+
+
+          <div class="row  my-5">
+            <div class="col-3">
+              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+              </div>
+            </div>
+            <div class="col-9">
+              <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">Home</div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Profile</div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">Message</div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">Settings</div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+    <h1 class="display-1 text-center py-4">Bootstrap 5 Cheat Sheet</h1>
+    <div class="container bg-secondary py-5">
+        <h2 class="h2 text-center">Container</h2>
+        <div class="row my-4">
+            <h3 class="h3 text-center">Row - Small Cards</h3>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="h4 text-center card-title">Small card 1</h4>
+                        <p class="card-text text-center">This is a small card</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="h4 text-center card-title">Small card 2</h4>
+                        <p class="card-text text-center">This is a small card</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="h4 text-center card-title">Small card 3</h4>
+                        <p class="card-text text-center">This is a small card</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <h3 class="h3 text-center">Row - Medium Cards</h3>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="h4 text-center card-title">Medium card 1</h4>
+                        <p class="card-text text-center">This is a Medium card</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="h4 text-center card-title">Medium card 2</h4>
+                        <p class="card-text text-center">This is a Medium card</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="h4 text-center card-title">Medium card 3</h4>
+                        <p class="card-text text-center">This is a Medium card</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <h3 class="h3 text-center">Row - Large Cards</h3>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="h4 text-center card-title">Large card 1</h4>
+                        <p class="card-text text-center">This is a Large card</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="h4 text-center card-title">Large card 2</h4>
+                        <p class="card-text text-center">This is a Large card</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="h4 text-center card-title">Large card 3</h4>
+                        <p class="card-text text-center">This is a Large card</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <h3 class="h3 text-center">Row - XL Cards</h3>
+            <div class="col-xl-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="h4 text-center card-title">XL card 1</h4>
+                        <p class="card-text text-center">This is an XL card</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="h4 text-center card-title">XL card 2</h4>
+                        <p class="card-text text-center">This is an XL card</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="h4 text-center card-title">XL card 3</h4>
+                        <p class="card-text text-center">This is an XL card</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <h3 class="h3 text-center">Row - XXL Cards</h3>
+            <div class="col-xxl-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="h4 text-center card-title">XXL card 1</h4>
+                        <p class="card-text text-center">This is an XXL card</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="h4 text-center card-title">XXL card 2</h4>
+                        <p class="card-text text-center">This is an XXL card</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="h4 text-center card-title">XXL card 3</h4>
+                        <p class="card-text text-center">This is an XXL card</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row">
+            <div class="bg-primary m-1 col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12</div>
+            <div class="bg-primary m-1 col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12</div>
+            <div class="bg-primary m-1 col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12</div>
+            <div class="bg-primary m-1 col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12</div>
+            <div class="bg-primary m-1 col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12</div>
+            <div class="bg-primary m-1 col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12</div>
+            <div class="bg-primary m-1 col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12</div>
+            <div class="bg-primary m-1 col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12</div>
+            <div class="bg-primary m-1 col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12</div>
+            <div class="bg-primary m-1 col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12</div>
+            <div class="bg-primary m-1 col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12</div>
+            <div class="bg-primary m-1 col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12</div>
+             </div>
+    </div>
+    <div class="container my-5">
+        <h2 class="display-1 text-center">Buttons</h2>
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-success">Success</button>
+        <button class="btn btn-danger">Danger</button>
+        <button class="btn btn-warning">Warning</button>
+        <button class="btn btn-info">Info</button>
+        <button class="btn btn-light">Light</button>
+        <button class="btn btn-dark">Dark</button>
+        <button class="btn btn-link">Link</button>
+        <hr/>
+        <button class="btn btn-outline-primary">Primary</button>
+        <button class="btn btn-outline-secondary">Secondary</button>
+        <button class="btn btn-outline-success">Success</button>
+        <button class="btn btn-outline-danger">Danger</button>
+        <button class="btn btn-outline-warning">Warning</button>
+        <button class="btn btn-outline-info">Info</button>
+        <button class="btn btn-outline-light">Light</button>
+        <button class="btn btn-outline-dark">Dark</button>
+        <button class="btn btn-outline-link">Link</button>
+        <hr/>
+        <button class="btn btn-sm btn-primary">Small</button>
+        <button class="btn btn-md btn-secondary">Medium</button>
+        <button class="btn btn-lg btn-success">Large</button>
+        <button class="btn btn-primary" disabled>Disabled</button>
+    </div>
+    <div class="container my-5">
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <h6>h6</h6>
+        <p class="display-1">Display 1</p>
+        <p class="display-2">Display 2</p>
+        <p class="display-3">Display 3</p>
+        <p class="display-4">Display 4</p>
+        <p class="display-5">Display 5</p>
+        <p class="display-6">Display 6</p>
+        <p><mark>Marked text</mark></p>
+        <p><del>Deleted text</del></p>
+        <p><s>Inaccurate text</s></p>
+        <p><ins>Inserted text</ins></p>
+        <p><u>Underlined text</u></p>
+        <p><small>Fine print</small></p>
+        <p><strong>Bold text</strong></p>
+        <p><em>Italicized text</em></p>
+        <figure class="text-center">
+            <blockquote class="blockquote">Block quoted</blockquote>
+            <figcaption class="blockquote-footer">Footer text</figcaption>
+        </figure>
+        <h3 class="text-center">Alignment - Inline elements</h3>
+        <div style="width: 100%">
+            <p class="text-start">Text start</p>
+            <br/>
+            <p class="text-center">Text center</p>
+            <br/>
+            <p class="text-end">Text end</p>
+        </div>
+        <h3 class="text-center">Alignment - Block elements</h3>
+        <div class="card float-start" style="width: 25%">
+            <div class="card-body">
+                <h4 class="card-title text-center">Float start</h4>
+            </div>
+        </div>
+        <div class="card float-end" style="width: 25%">
+            <div class="card-body">
+                <h4 class="card-title text-center">Float end</h4>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <h1 class="display-1 text-center">Lists</h1>
+        <ul class="list-unstyled text-center">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <ul class="list-inline">
+            <li class="list-inline-item">Inline item 1</li>
+            <li class="list-inline-item">Inline item 2</li>
+            <li class="list-inline-item">Inline item 3</li>
+        </ul>
+        <hr/>
+        <h2 class="display-1 text-center">Responsive Images</h2>
+        <div style="margin: 0 auto; width: 20%;">
+            <img class="img-fluid" src="dogelogotrans.png" alt="Doge"/>
+        </div>
+        <h2 class="display-1 text-center mt-3">Tables</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First</th>
+                    <th>Last</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Joe</td>
+                    <td>Cumia</td>
+                    <td class="table-danger">Welfare recipient</td>
+                </tr>
+                <tr class="table-danger">
+                    <th scope="row">2</th>
+                    <td>Anthony</td>
+                    <td>Cumia</td>
+                    <td>Joe's bro</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Patrick</td>
+                    <td>Tomlinson</td>
+                    <td>Professional Twitterer</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Striped, dark, hoverable, bordered</h2>
+        <table class="table table-striped table-dark table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First</th>
+                    <th>Last</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Joe</td>
+                    <td>Cumia</td>
+                    <td>Welfare recipient</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Anthony</td>
+                    <td>Cumia</td>
+                    <td>Joe's bro</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Patrick</td>
+                    <td>Tomlinson</td>
+                    <td>Professional Twitterer</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Small</h2>
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First</th>
+                    <th>Last</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Joe</td>
+                    <td>Cumia</td>
+                    <td>Welfare recipient</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Anthony</td>
+                    <td>Cumia</td>
+                    <td>Joe's bro</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Patrick</td>
+                    <td>Tomlinson</td>
+                    <td>Professional Twitterer</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Responsive</h2>
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First</th>
+                    <th>Last</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Joe</td>
+                    <td>Cumia</td>
+                    <td>Welfare recipient</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Anthony</td>
+                    <td>Cumia</td>
+                    <td>Joe's bro</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Patrick</td>
+                    <td>Tomlinson</td>
+                    <td>Professional Twitterer</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="display-1">Alerts</h2>
+        <div class="alert alert-primary" role="alert">
+            Primary Alert
+        </div>
+        <div class="alert alert-secondary" role="alert">
+            Secondary Alert
+        </div>
+        <div class="alert alert-success" role="alert">
+            Success Alert
+        </div>
+        <div class="alert alert-danger" role="alert">
+            Danger Alert
+        </div>
+        <div class="alert alert-warning" role="alert">
+            Warning Alert
+        </div>
+        <div class="alert alert-info" role="alert">
+            Info Alert
+        </div>
+        <div class="alert alert-light" role="alert">
+            Light Alert
+        </div>
+        <div class="alert alert-dark" role="alert">
+            Dark Alert
+        </div>
+        <hr>
+        <!-- <h2 class="display-1">Toast Messages</h2>
+        <button onclick="fire()" class="btn btn-primary">Click me</button>
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <img src="..." class="rounded mr-2" alt="...">
+              <strong class="mr-auto">Bootstrap</strong>
+              <small>11 mins ago</small>
+              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="toast-body">
+              Hello, world! This is a toast message.
+            </div>
+          </div>
+        </div> -->
+        <h2 class="display-3">Later: Toast, scrollspy, </h2>
+    </div>
+</body>
+</html>
